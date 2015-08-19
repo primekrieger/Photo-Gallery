@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="09q-dz-oKr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="112" y="398"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="2nQ-yO-tVF">
             <objects>
                 <navigationController id="FAk-7H-M4e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="a6U-GS-SEH"/>
+                    <tabBarItem key="tabBarItem" title="List" id="a6U-GS-SEH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2C-a5-cJ2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -51,10 +51,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LDx-6Q-ZhZ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="1hj-wJ-IN1" style="IBUITableViewCellStyleDefault" id="LDx-6Q-ZhZ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LDx-6Q-ZhZ" id="QYe-Ll-60p">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1hj-wJ-IN1">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -130,11 +138,11 @@
             </objects>
             <point key="canvasLocation" x="2083.5" y="397.5"/>
         </scene>
-        <!--Item-->
+        <!--Tiles-->
         <scene sceneID="7d9-zJ-Do5">
             <objects>
                 <navigationController id="i0h-z6-Hv2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Edh-N7-sqg"/>
+                    <tabBarItem key="tabBarItem" title="Tiles" id="Edh-N7-sqg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ud-u3-xby">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

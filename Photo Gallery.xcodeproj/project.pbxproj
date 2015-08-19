@@ -14,6 +14,9 @@
 		FC6F6DB71B834EE000387AA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DB61B834EE000387AA8 /* Images.xcassets */; };
 		FC6F6DBA1B834EE000387AA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DB81B834EE000387AA8 /* LaunchScreen.xib */; };
 		FC6F6DC61B834EE100387AA8 /* Photo_GalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DC51B834EE100387AA8 /* Photo_GalleryTests.m */; };
+		FC6F6DD11B8350D500387AA8 /* GalleryData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DD01B8350D500387AA8 /* GalleryData.m */; };
+		FC6F6DD31B8351D700387AA8 /* Albums.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DD21B8351D700387AA8 /* Albums.plist */; };
+		FCE43A251B844939005F843F /* AlbumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE43A241B844939005F843F /* AlbumListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		FC6F6DBF1B834EE100387AA8 /* Photo GalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo GalleryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6F6DC41B834EE100387AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6F6DC51B834EE100387AA8 /* Photo_GalleryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_GalleryTests.m; sourceTree = "<group>"; };
+		FC6F6DCF1B8350D500387AA8 /* GalleryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryData.h; sourceTree = "<group>"; };
+		FC6F6DD01B8350D500387AA8 /* GalleryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryData.m; sourceTree = "<group>"; };
+		FC6F6DD21B8351D700387AA8 /* Albums.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Albums.plist; sourceTree = "<group>"; };
+		FCE43A231B844939005F843F /* AlbumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListTableViewController.h; sourceTree = "<group>"; };
+		FCE43A241B844939005F843F /* AlbumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,11 @@
 				FC6F6DB61B834EE000387AA8 /* Images.xcassets */,
 				FC6F6DB81B834EE000387AA8 /* LaunchScreen.xib */,
 				FC6F6DA91B834EE000387AA8 /* Supporting Files */,
+				FC6F6DCF1B8350D500387AA8 /* GalleryData.h */,
+				FC6F6DD01B8350D500387AA8 /* GalleryData.m */,
+				FC6F6DD21B8351D700387AA8 /* Albums.plist */,
+				FCE43A231B844939005F843F /* AlbumListTableViewController.h */,
+				FCE43A241B844939005F843F /* AlbumListTableViewController.m */,
 			);
 			path = "Photo Gallery";
 			sourceTree = "<group>";
@@ -201,6 +214,7 @@
 			files = (
 				FC6F6DB51B834EE000387AA8 /* Main.storyboard in Resources */,
 				FC6F6DBA1B834EE000387AA8 /* LaunchScreen.xib in Resources */,
+				FC6F6DD31B8351D700387AA8 /* Albums.plist in Resources */,
 				FC6F6DB71B834EE000387AA8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +235,9 @@
 			files = (
 				FC6F6DB21B834EE000387AA8 /* ViewController.m in Sources */,
 				FC6F6DAF1B834EE000387AA8 /* AppDelegate.m in Sources */,
+				FC6F6DD11B8350D500387AA8 /* GalleryData.m in Sources */,
 				FC6F6DAC1B834EE000387AA8 /* main.m in Sources */,
+				FCE43A251B844939005F843F /* AlbumListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +432,7 @@
 				FC6F6DCB1B834EE100387AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC6F6DCC1B834EE100387AA8 /* Build configuration list for PBXNativeTarget "Photo GalleryTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				FC6F6DCE1B834EE100387AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
