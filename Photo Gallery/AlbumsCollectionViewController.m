@@ -14,7 +14,7 @@
 
 @implementation AlbumsCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"AlbumCollectionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,7 +61,9 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor = [UIColor blueColor];
+    cell.backgroundColor = [UIColor brownColor ];
+    
+    
     return cell;
 }
 
