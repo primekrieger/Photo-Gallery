@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FC6F6DAC1B834EE000387AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DAB1B834EE000387AA8 /* main.m */; };
 		FC6F6DAF1B834EE000387AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DAE1B834EE000387AA8 /* AppDelegate.m */; };
-		FC6F6DB21B834EE000387AA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DB11B834EE000387AA8 /* ViewController.m */; };
 		FC6F6DB51B834EE000387AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DB31B834EE000387AA8 /* Main.storyboard */; };
 		FC6F6DB71B834EE000387AA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DB61B834EE000387AA8 /* Images.xcassets */; };
 		FC6F6DBA1B834EE000387AA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DB81B834EE000387AA8 /* LaunchScreen.xib */; };
@@ -18,6 +17,7 @@
 		FC6F6DD31B8351D700387AA8 /* Albums.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC6F6DD21B8351D700387AA8 /* Albums.plist */; };
 		FCE43A251B844939005F843F /* AlbumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE43A241B844939005F843F /* AlbumListTableViewController.m */; };
 		FCE43A271B844B80005F843F /* Photos in Resources */ = {isa = PBXBuildFile; fileRef = FCE43A261B844B80005F843F /* Photos */; };
+		FCE43A2A1B84554E005F843F /* AlbumsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE43A291B84554E005F843F /* AlbumsCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,6 @@
 		FC6F6DAB1B834EE000387AA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC6F6DAD1B834EE000387AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC6F6DAE1B834EE000387AA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC6F6DB01B834EE000387AA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC6F6DB11B834EE000387AA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC6F6DB41B834EE000387AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC6F6DB61B834EE000387AA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC6F6DB91B834EE000387AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +48,8 @@
 		FCE43A231B844939005F843F /* AlbumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListTableViewController.h; sourceTree = "<group>"; };
 		FCE43A241B844939005F843F /* AlbumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListTableViewController.m; sourceTree = "<group>"; };
 		FCE43A261B844B80005F843F /* Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Photos; sourceTree = "<group>"; };
+		FCE43A281B84554E005F843F /* AlbumsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsCollectionViewController.h; sourceTree = "<group>"; };
+		FCE43A291B84554E005F843F /* AlbumsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,6 @@
 				FCE43A261B844B80005F843F /* Photos */,
 				FC6F6DAD1B834EE000387AA8 /* AppDelegate.h */,
 				FC6F6DAE1B834EE000387AA8 /* AppDelegate.m */,
-				FC6F6DB01B834EE000387AA8 /* ViewController.h */,
-				FC6F6DB11B834EE000387AA8 /* ViewController.m */,
 				FC6F6DB31B834EE000387AA8 /* Main.storyboard */,
 				FC6F6DB61B834EE000387AA8 /* Images.xcassets */,
 				FC6F6DB81B834EE000387AA8 /* LaunchScreen.xib */,
@@ -105,6 +103,8 @@
 				FC6F6DD21B8351D700387AA8 /* Albums.plist */,
 				FCE43A231B844939005F843F /* AlbumListTableViewController.h */,
 				FCE43A241B844939005F843F /* AlbumListTableViewController.m */,
+				FCE43A281B84554E005F843F /* AlbumsCollectionViewController.h */,
+				FCE43A291B84554E005F843F /* AlbumsCollectionViewController.m */,
 			);
 			path = "Photo Gallery";
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6F6DB21B834EE000387AA8 /* ViewController.m in Sources */,
+				FCE43A2A1B84554E005F843F /* AlbumsCollectionViewController.m in Sources */,
 				FC6F6DAF1B834EE000387AA8 /* AppDelegate.m in Sources */,
 				FC6F6DD11B8350D500387AA8 /* GalleryData.m in Sources */,
 				FC6F6DAC1B834EE000387AA8 /* main.m in Sources */,

@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="631.5" y="-24.5"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Albums Collection View Controller-->
         <scene sceneID="p4E-bv-Wzb">
             <objects>
-                <collectionViewController id="7dO-hn-kz8" sceneMemberID="viewController">
+                <collectionViewController id="7dO-hn-kz8" customClass="AlbumsCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6WV-jc-1BA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,8 +181,8 @@
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="7dO-hn-kz8" id="U4n-R8-uAJ"/>
-                            <outlet property="delegate" destination="7dO-hn-kz8" id="4XV-s5-7jM"/>
+                            <outlet property="dataSource" destination="7dO-hn-kz8" id="6Ve-im-txv"/>
+                            <outlet property="delegate" destination="7dO-hn-kz8" id="jg8-w5-KeT"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="vKa-Ik-pIT"/>
@@ -197,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OEI-gq-CLD"/>
+        <segue reference="5G3-bW-EiU"/>
     </inferredMetricsTieBreakers>
 </document>
