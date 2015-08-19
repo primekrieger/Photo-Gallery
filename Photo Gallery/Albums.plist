@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>AlbumName</key>
+		<string>Animals</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>dog.jpg</string>
+			<string>fox.jpg</string>
+			<string>panda.jpg</string>
+			<string>penguin.jpg</string>
+			<string>tiger_cubs.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>AlbumName</key>
+		<string>Beaches</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>insta.jpg</string>
+			<string>path.jpg</string>
+			<string>sunset.jpg</string>
+			<string>trees.jpg</string>
+			<string>water.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>AlbumName</key>
+		<string>Food</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>mix.jpg</string>
+			<string>pizza.jpg</string>
+			<string>roasted.jpg</string>
+			<string>sandwich.jpg</string>
+			<string>tomatoes.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>AlbumName</key>
+		<string>Mountains</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>mountain-ranges.jpg</string>
+			<string>mountainreflection3.jpg</string>
+			<string>pamir05.jpg</string>
+			<string>reflection.jpg</string>
+			<string>unicorn.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>AlbumName</key>
+		<string>Stadiums</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>camp-nou.jpg</string>
+			<string>emirates.jpg</string>
+			<string>madrid.jpg</string>
+			<string>old_trafford.jpg</string>
+			<string>San_Siro.jpg</string>
+		</array>
+	</dict>
+</array>
 </plist>
