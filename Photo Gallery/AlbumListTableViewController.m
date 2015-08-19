@@ -23,6 +23,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.Albums = [[GalleryData getGalleryData] AlbumArray];     // Get the array object loaded from plist
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,27 +34,25 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.Albums.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumListCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    NSString *albumName = [[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumName"];   // Get the value from the name key present in the dictionary object of the array
+    cell.textLabel.text = albumName;
+    
+    NSString *firstImageName = [[[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumImages"] objectAtIndex:0];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Photos/%@/%@", albumName, firstImageName]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

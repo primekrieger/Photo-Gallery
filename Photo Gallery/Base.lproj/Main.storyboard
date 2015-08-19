@@ -42,16 +42,16 @@
             </objects>
             <point key="canvasLocation" x="631.5" y="825.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Album List Table View Controller-->
         <scene sceneID="Rtw-dq-gau">
             <objects>
-                <tableViewController id="j3r-jJ-8Zm" sceneMemberID="viewController">
+                <tableViewController id="j3r-jJ-8Zm" customClass="AlbumListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qcg-9s-nIh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="1hj-wJ-IN1" style="IBUITableViewCellStyleDefault" id="LDx-6Q-ZhZ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumListCell" textLabel="1hj-wJ-IN1" style="IBUITableViewCellStyleDefault" id="LDx-6Q-ZhZ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LDx-6Q-ZhZ" id="QYe-Ll-60p">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -67,8 +67,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="j3r-jJ-8Zm" id="PtQ-kw-wtm"/>
-                            <outlet property="delegate" destination="j3r-jJ-8Zm" id="IOL-0z-btq"/>
+                            <outlet property="dataSource" destination="j3r-jJ-8Zm" id="eNO-bc-4Z6"/>
+                            <outlet property="delegate" destination="j3r-jJ-8Zm" id="Ode-RK-Hvc"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="DB6-PF-sNQ"/>
