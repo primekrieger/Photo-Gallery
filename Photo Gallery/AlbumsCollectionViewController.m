@@ -64,11 +64,13 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
     
     // Configure the cell
     UIImageView *cellImage = (UIImageView *)[cell viewWithTag:100];
+    UILabel *cellLabel = (UILabel *)[cell viewWithTag:99];
+    
     NSString *albumName = [[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumName"];   // Get the value from the name key present in the dictionary object of the array
+    cellLabel.text = albumName;
     
     NSString *firstImageName = [[[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumImages"] objectAtIndex:0];
     cellImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"Photos/%@/%@", albumName, firstImageName]];
-    
     
     return cell;
 }
