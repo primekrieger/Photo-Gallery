@@ -8,6 +8,7 @@
 
 #import "AlbumListTableViewController.h"
 #import "GalleryData.h"
+#import "PhotosCollectionViewController.h"
 
 @interface AlbumListTableViewController ()
 
@@ -24,7 +25,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.Albums = [[GalleryData getGalleryData] AlbumArray];     // Get the array object loaded from plist
+    self.Albums = [[GalleryData getGalleryData] AlbumsArray];     // Get the array object loaded from plist
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,14 +89,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+// The following method sets the selectedRowNum property of the DetailViewController to the selected row
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"selectedAlbumFromList"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setSelectedAlbumNum:[indexPath row]];
+    }
 }
-*/
 
 @end

@@ -10,7 +10,7 @@
 
 @interface GalleryData : NSObject
 
-@property NSArray *AlbumArray;
+@property NSArray *AlbumsArray;
 
 + (GalleryData *) getGalleryData;
 

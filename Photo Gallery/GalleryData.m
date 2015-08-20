@@ -22,7 +22,7 @@
         sharedGalleryData = [[GalleryData alloc] init];
         
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Albums" ofType:@"plist"];
-        sharedGalleryData.AlbumArray = [[NSArray alloc] initWithContentsOfFile:path];
+        sharedGalleryData.AlbumsArray = [[NSArray alloc] initWithContentsOfFile:path];
         
     });
     
