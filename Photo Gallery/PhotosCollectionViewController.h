@@ -10,7 +10,6 @@
 
 @interface PhotosCollectionViewController : UICollectionViewController
 
-@property NSDictionary *currentAlbum;
 @property NSInteger selectedAlbumNum;
 
 @end

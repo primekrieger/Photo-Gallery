@@ -8,6 +8,7 @@
 
 #import "AlbumsCollectionViewController.h"
 #import "GalleryData.h"
+#import "PhotosCollectionViewController.h"
 
 @interface AlbumsCollectionViewController ()
 
@@ -27,6 +28,7 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
     // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"Albums";
     self.Albums = [[GalleryData getGalleryData] AlbumsArray];     // Get the array object loaded from plist
 }
 
@@ -35,15 +37,17 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+// The following method sets the selectedRowNum property of the DetailViewController to the selected row
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"selectedAlbumFromTiles"]) {
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];    //*****************
+        [[segue destinationViewController] setSelectedAlbumNum:indexPath.item]; // Functionally indexPath.item is same as indexPath.row
+    }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 

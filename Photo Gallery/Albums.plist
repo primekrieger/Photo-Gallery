@@ -31,11 +31,11 @@
 		<string>Food</string>
 		<key>AlbumImages</key>
 		<array>
-			<string>mix.jpg</string>
 			<string>pizza.jpg</string>
 			<string>roasted.jpg</string>
 			<string>sandwich.jpg</string>
 			<string>tomatoes.jpg</string>
+			<string>veg.jpg</string>
 		</array>
 	</dict>
 	<dict>

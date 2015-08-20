@@ -11,6 +11,9 @@
 
 @interface PhotosCollectionViewController ()
 
+@property NSDictionary *currentAlbum;
+@property NSString *albumName;
+
 @end
 
 @implementation PhotosCollectionViewController
@@ -29,6 +32,8 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     // Do any additional setup after loading the view.
     
     self.currentAlbum = [[[GalleryData getGalleryData] AlbumsArray] objectAtIndex:self.selectedAlbumNum];     // Get the array object loaded from plist
+    self.albumName = [self.currentAlbum objectForKey:@"AlbumName"];
+    self.navigationItem.title = self.albumName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,19 +60,21 @@ static NSString * const reuseIdentifier = @"PhotoCell";
 }
 */
 
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [[self.currentAlbum objectForKey:@"AlbumImages"] count];
 }
+
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    UIImageView *cellImage = (UIImageView *)[cell viewWithTag:50];
-    UILabel *cellLabel = (UILabel *)[cell viewWithTag:49];
-    
     NSString *imageName = [[self.currentAlbum objectForKey:@"AlbumImages"] objectAtIndex:indexPath.row];
-    cellImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"Photos/%@/%@", albumName, imageName]];
+    
+    UIImageView *cellImage = (UIImageView *)[cell viewWithTag:50];
+    cellImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"Photos/%@/%@", self.albumName, imageName]];
     
     return cell;
 }
