@@ -10,4 +10,6 @@
 
 @interface AlbumsCollectionViewController : UICollectionViewController
 
+@property NSArray *Albums;
+
 @end

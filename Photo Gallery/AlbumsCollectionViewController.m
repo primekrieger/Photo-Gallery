@@ -7,6 +7,7 @@
 //
 
 #import "AlbumsCollectionViewController.h"
+#import "GalleryData.h"
 
 @interface AlbumsCollectionViewController ()
 
@@ -23,9 +24,10 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    self.Albums = [[GalleryData getGalleryData] AlbumArray];     // Get the array object loaded from plist
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,14 +56,18 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 10;
+    return self.Albums.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor = [UIColor brownColor ];
+    UIImageView *cellImage = (UIImageView *)[cell viewWithTag:100];
+    NSString *albumName = [[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumName"];   // Get the value from the name key present in the dictionary object of the array
+    
+    NSString *firstImageName = [[[self.Albums objectAtIndex:indexPath.row] objectForKey:@"AlbumImages"] objectAtIndex:0];
+    cellImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"Photos/%@/%@", albumName, firstImageName]];
     
     
     return cell;
