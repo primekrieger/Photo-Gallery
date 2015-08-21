@@ -22,12 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIImage *image = [UIImage imageNamed:self.selectedPhotoPath];
-    self.imageView = [[UIImageView alloc] initWithImage:image];
-    //self.imageView.frame = (CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size};
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.selectedPhotoPath]];
+    self.imageView.frame = (CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=self.imageView.image.size};
     [self.photoScrollView addSubview:self.imageView];
     
-    self.photoScrollView.contentSize = image.size;
+    self.photoScrollView.contentSize = self.imageView.image.size;
+    
+    //self.navigationController.navigationBarHidden = YES;
     
 }
 
@@ -35,15 +36,17 @@
     
     [super viewWillAppear:animated];
     
-    CGRect scrollViewFrame = self.photoScrollView.frame;
-    CGFloat scaleWidth = scrollViewFrame.size.width / self.photoScrollView.contentSize.width;
-    CGFloat scaleHeight = scrollViewFrame.size.height / self.photoScrollView.contentSize.height;
+    CGSize scrollViewFrameSize = self.photoScrollView.frame.size;
+    CGFloat scaleWidth = scrollViewFrameSize.width / self.imageView.image.size.width;
+    CGFloat scaleHeight = scrollViewFrameSize.height / self.imageView.image.size.height;;
     CGFloat minScale = MIN(scaleWidth, scaleHeight);
     
-    self.photoScrollView.zoomScale = minScale;
-    NSLog(@"will appear %f", minScale);
-    self.photoScrollView.minimumZoomScale = 0.5f;
+    self.photoScrollView.minimumZoomScale = minScale;
     self.photoScrollView.maximumZoomScale = 1.0f;
+    
+    self.photoScrollView.zoomScale = minScale;
+    
+    //NSLog(@"will appear %f", minScale);
     
     [self centerScrollViewContents];
 }
