@@ -8,6 +8,7 @@
 
 #import "PhotosCollectionViewController.h"
 #import "GalleryData.h"
+#import "PhotoPanAndZoomViewController.h"
 
 @interface PhotosCollectionViewController ()
 
@@ -41,15 +42,18 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showSelectedPhoto"]) {
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+        NSString *imageName = [[self.currentAlbum objectForKey:@"AlbumImages"] objectAtIndex:indexPath.item];
+        [[segue destinationViewController] setSelectedPhotoPath:[NSString stringWithFormat:@"Photos/%@/%@", self.albumName, imageName]];
+    }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 

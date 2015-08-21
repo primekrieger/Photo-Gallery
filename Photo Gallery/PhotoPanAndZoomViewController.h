@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *photoScrollView;
 
+@property NSString *selectedPhotoPath;
+
 @end
