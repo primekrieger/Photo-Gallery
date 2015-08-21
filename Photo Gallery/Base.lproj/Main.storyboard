@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1113.5" y="825.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Pan And Zoom View Controller-->
         <scene sceneID="Wwf-l7-UgB">
             <objects>
-                <viewController id="gVx-Am-Zig" sceneMemberID="viewController">
+                <viewController id="gVx-Am-Zig" customClass="PhotoPanAndZoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jE8-Zo-Q9T"/>
                         <viewControllerLayoutGuide type="bottom" id="C6A-rU-sbo"/>
@@ -92,9 +92,17 @@
                     <view key="view" contentMode="scaleToFill" id="Cla-Tq-bs4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMy-VF-HO2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="photoScrollView" destination="RMy-VF-HO2" id="08L-V2-YZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94w-XA-U2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,6 +211,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="gVx-Am-Zig" kind="show" identifier="showSelectedPhoto" id="oht-oR-j4T"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC01E7771B871D3F00822D1F /* PhotoPanAndZoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC01E7761B871D3F00822D1F /* PhotoPanAndZoomViewController.m */; };
 		FC1409761B85B33A00DA487E /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1409751B85B33A00DA487E /* PhotosCollectionViewController.m */; };
 		FC6F6DAC1B834EE000387AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DAB1B834EE000387AA8 /* main.m */; };
 		FC6F6DAF1B834EE000387AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F6DAE1B834EE000387AA8 /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC01E7751B871D3F00822D1F /* PhotoPanAndZoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPanAndZoomViewController.h; sourceTree = "<group>"; };
+		FC01E7761B871D3F00822D1F /* PhotoPanAndZoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPanAndZoomViewController.m; sourceTree = "<group>"; };
 		FC1409741B85B33A00DA487E /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		FC1409751B85B33A00DA487E /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
 		FC6F6DA61B834EE000387AA8 /* Photo Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,8 @@
 				FCE43A291B84554E005F843F /* AlbumsCollectionViewController.m */,
 				FC1409741B85B33A00DA487E /* PhotosCollectionViewController.h */,
 				FC1409751B85B33A00DA487E /* PhotosCollectionViewController.m */,
+				FC01E7751B871D3F00822D1F /* PhotoPanAndZoomViewController.h */,
+				FC01E7761B871D3F00822D1F /* PhotoPanAndZoomViewController.m */,
 			);
 			path = "Photo Gallery";
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC01E7771B871D3F00822D1F /* PhotoPanAndZoomViewController.m in Sources */,
 				FCE43A2A1B84554E005F843F /* AlbumsCollectionViewController.m in Sources */,
 				FC6F6DAF1B834EE000387AA8 /* AppDelegate.m in Sources */,
 				FC6F6DD11B8350D500387AA8 /* GalleryData.m in Sources */,
