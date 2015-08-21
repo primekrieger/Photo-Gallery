@@ -35,7 +35,11 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     self.currentAlbum = [[[GalleryData getGalleryData] AlbumsArray] objectAtIndex:self.selectedAlbumNum];     // Get the array object loaded from plist
     self.albumName = [self.currentAlbum objectForKey:@"AlbumName"];
     self.navigationItem.title = self.albumName;
+    
+    self.tabBarController.tabBar.hidden = YES;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

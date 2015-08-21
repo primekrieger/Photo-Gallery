@@ -52,6 +52,16 @@
 	</dict>
 	<dict>
 		<key>AlbumName</key>
+		<string>Random</string>
+		<key>AlbumImages</key>
+		<array>
+			<string>vertical.jpg</string>
+			<string>landscape.jpg</string>
+			<string>wave.jpg</string>
+		</array>
+	</dict>
+	<dict>
+		<key>AlbumName</key>
 		<string>Stadiums</string>
 		<key>AlbumImages</key>
 		<array>

@@ -30,6 +30,12 @@ static NSString * const reuseIdentifier = @"AlbumCollectionCell";
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"Albums";
     self.Albums = [[GalleryData getGalleryData] AlbumsArray];     // Get the array object loaded from plist
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
