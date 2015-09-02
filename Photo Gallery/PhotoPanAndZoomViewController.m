@@ -62,7 +62,8 @@
     }
     
     if (contentsFrame.size.height < boundsSize.height) {
-        contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0f;
+        contentsFrame.origin.y = (boundsSize.height - self.navigationController.navigationBar.frame.size.height - contentsFrame.size.height) / 2.0f;
+        
     } else {
         contentsFrame.origin.y = 0.0f;
     }
